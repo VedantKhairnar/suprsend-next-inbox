@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+SuprSend Inbox Next.js Integration Example
+====================================
 
-## Getting Started
+This repository provides an example of integrating **SuprSend Inbox** into a Next.js application to enable real-time notifications for your users. SuprSend simplifies notification management and helps you keep your users informed and engaged.
 
-First, run the development server:
+Features
+--------
+
+-   Effortless integration of SuprSend Inbox in a Next.js app.
+-   Real-time notifications.
+-   Customizable inbox with Headless Inbox mode for complete control over UI.
+
+Prerequisites
+-------------
+
+-   Node.js (version 14 or higher)
+-   Yarn (recommended for package management)
+
+Getting Started
+---------------
+
+### 1\. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/suprsend-next-inbox.git
+cd suprsend-next-inbox
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2\. Install Dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+yarn install
+```
+### 3\. Set Up SuprSend
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   Create a **SuprSend** account and get your **workspaceKey**, **subscriberId**, and **distinctId**.
+-   Replace these values in the `index.js` file under `pages`:
 
-## Learn More
+```javascript
+workspaceKey="<workspace-key>"
+subscriberId="<subscriber-id>"
+distinctId="<distinct-id>"
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4\. Run the Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+```
+yarn dev
+```
+Visit <http://localhost:3000> to see your working notification inbox.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Customization
+-------------
 
-## Deploy on Vercel
+You can customize the notifications UI using the **Headless Inbox** feature for full control over the notification display.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+For more details, refer to the [SuprSend Documentation](https://docs.suprsend.com/docs/react-customize-inbox).
